@@ -15,7 +15,6 @@ public class Paquete {
     double peso;
     boolean asegurado;
 
-    
     public Paquete(String codigo, String destino, double peso, boolean asegurado) {
         this.codigo = codigo;
         this.destino = destino;
@@ -23,7 +22,14 @@ public class Paquete {
         this.asegurado = asegurado;
     }
 
-    
+    public Paquete(String codigo, String destino) {
+        this(codigo, destino, 1.0, false);
+    }
+
+    public Paquete(String codigo) {
+        this(codigo, "Por asignar");
+    }
+
     public void mostrarInformacion() {
         System.out.println(codigo + " -> " + destino + " | " + peso + " kg | asegurado: " + asegurado);
     }
