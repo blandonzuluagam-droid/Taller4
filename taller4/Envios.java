@@ -16,9 +16,15 @@ public class Envios {
         Paquete p2 = new Paquete("P-002", "Pereira");
         Paquete p3 = new Paquete("P-003");
 
+        p3.actualizarPeso(2.5);
+
         p1.mostrarInformacion();
         p2.mostrarInformacion();
         p3.mostrarInformacion();
+
+        
+        double total = p1.calcularCosto() + p2.calcularCosto() + p3.calcularCosto();
+        System.out.println("Total del envío: " + total);
     }
 }
 
