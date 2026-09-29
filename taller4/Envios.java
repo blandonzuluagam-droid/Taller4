@@ -22,9 +22,14 @@ public class Envios {
         p2.mostrarInformacion();
         p3.mostrarInformacion();
 
-        
         double total = p1.calcularCosto() + p2.calcularCosto() + p3.calcularCosto();
         System.out.println("Total del envío: " + total);
+
+        
+        System.out.println(p1.calcularCosto(4000));  // 20000.0
+        System.out.println(p2.calcularCosto(4000));  // 4000.0
+
+        
     }
 }
 
