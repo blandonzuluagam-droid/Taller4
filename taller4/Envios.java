@@ -12,12 +12,8 @@ public class Envios {
 
     public static void main(String[] args) {
 
-        Paquete p = new Paquete();
-
-        System.out.println("Código: " + p.codigo);
-        System.out.println("Destino: " + p.destino);
-        System.out.println("Peso: " + p.peso);
-        System.out.println("Asegurado: " + p.asegurado);
+        Paquete p1 = new Paquete("P-001", "Manizales", 3.0, true);
+        p1.mostrarInformacion();
     }
 }
 
