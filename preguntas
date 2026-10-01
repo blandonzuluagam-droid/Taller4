@@ -1,0 +1,19 @@
+1. ¿Qué diferencias hay entre un constructor y un método?
+
+El constructor se llama igual que la clase, no lleva tipo de retorno (ni void) y se ejecuta una sola vez, al crear el objeto con new. Un método tiene el nombre que yo quiera, siempre declara su retorno y lo llamo las veces que necesite.
+
+2. ¿Por qué new Paquete() dejó de compilar? ¿Qué haría para seguir creando paquetes sin datos?
+
+Porque Java solo da el constructor sin parámetros cuando la clase no tiene ninguno. Al escribir el de cuatro parámetros, el automático desapareció. Para recuperarlo, escribiría yo mismo un constructor vacío que delegue con valores por defecto: this("SIN-CODIGO", "Sin destino", 0.0, false);.
+
+3. ¿Qué pasaría con peso = peso;? ¿Compilaría?
+
+Sí compilaría, pero estaría mal: el parámetro tapa al atributo, así que solo se asigna a sí mismo y el atributo se queda en 0.0. Es un error de lógica, no de sintaxis.
+
+4. ¿Qué es la firma de un método y por qué el retorno no distingue sobrecargas?
+
+La firma es el nombre más los tipos, cantidad y orden de los parámetros, como calcularEstadia(int, double). El retorno no cuenta porque al llamar al método el compilador solo ve el nombre y los argumentos, y no podría saber cuál versión elegir.
+
+5. ¿Qué ventaja tiene delegar con this(...)?
+
+La asignación de atributos queda en un solo lugar. Si cambio algo, lo hago una vez, y me evito errores o código repetido en cada constructor.
